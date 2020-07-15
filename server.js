@@ -11,8 +11,10 @@ server.use(express.json());
 
 server.use("/students", studentsRoutes);
 
+const uri =
+  "mongodb+srv://user:user@test.hw7hj.mongodb.net/community?retryWrites=true&w=majority";
 mongoose
-  .connect(process.env.Mongo_URI, {
+  .connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
