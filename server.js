@@ -12,7 +12,7 @@ server.use(express.json());
 server.use("/students", studentsRoutes);
 
 mongoose
-  .connect(process.env.uri, {
+  .connect(process.env.uri || uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
