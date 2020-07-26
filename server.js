@@ -17,7 +17,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(
-    server.listen(port, () => {
+    server.listen(port || 3000, () => {
       console.log(`working on port${port}`);
     })
   );
